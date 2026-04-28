@@ -106,46 +106,105 @@ button:hover{
 <script>
 const questions = [
 {
-question:"Do you think I’m the best husband ever?",
-yes:"I knew you had great taste ❤️😎",
-no:"Oops... looks like I need extra husband training 😂"
+question:"Do you think I’m the luckiest husband alive?",
+yes:"Absolutely true ❤️",
+no:"Excuse me? Retry your answer 😏"
 },
 {
 question:"Will you love me forever?",
-yes:"Best birthday gift ever 💖",
-no:"Too late... lifetime contract already signed 😜"
+yes:"That’s all I wanted to hear 💖",
+no:"Too late… lifetime subscription already activated 😂"
 },
 {
 question:"Am I your favorite person?",
-yes:"As expected 😌❤️",
-no:"Should I start being jealous now? 👀😂"
+yes:"As expected 😎❤️",
+no:"Who is competing with me? Tell me now 👀"
 },
 {
-question:"Will you be my forever birthday queen?",
-yes:"Always and forever 👑❤️",
-no:"I’ll keep campaigning until I win 😂"
+question:"Can I steal your birthday cake?",
+yes:"That’s true love 🍰❤️",
+no:"Cake over husband? I’ll remember this 😂"
+},
+{
+question:"Do you still get butterflies when you see me?",
+yes:"Mission successful 😍",
+no:"I’ll upgrade my style soon 😎"
+},
+{
+question:"Are you happy being my wife?",
+yes:"That makes me the happiest husband ❤️",
+no:"Wait… let me fix this with gifts 🎁😂"
+},
+{
+question:"Am I handsome?",
+yes:"I knew it 😌🔥",
+no:"Your eyesight needs checking 😜"
+},
+{
+question:"Do you think our baby got cuteness from me?",
+yes:"Obviously my genes 😎👶",
+no:"Wow… complete betrayal 😂"
+},
+{
+question:"Should I buy you more gifts?",
+yes:"Correct answer 🎁❤️",
+no:"That sounds suspicious 🤨😂"
+},
+{
+question:"Am I your permanent headache?",
+yes:"At least I’m permanent 😎",
+no:"That means I need to annoy you more 😂"
+},
+{
+question:"Will you always be my queen?",
+yes:"Forever and always 👑❤️",
+no:"Application rejected… but I’ll try again 😂"
+},
+{
+question:"Do you know you’re the best gift in my life?",
+yes:"And today we celebrate YOU ❤️🎂",
+no:"Wrong answer… birthday girl gets one retry 😜"
+},
+{
+question:"Should we go on more adventures together?",
+yes:"Pack your bags ❤️✈️",
+no:"Adventure starts anyway 😂"
+},
+{
+question:"Can I annoy you forever?",
+yes:"That’s real love 😂❤️",
+no:"Too late… no refund policy 😎"
+},
+{
+question:"Are you the cutest mommy?",
+yes:"Our little boy agrees 👶❤️",
+no:"Baby disagrees with you 😂"
 }
 ];
 
 let currentQuestion = 0;
 
 function loadQuestion(){
-    document.getElementById("question").innerText = questions[currentQuestion].question;
+    document.getElementById("question").innerText =
+        questions[currentQuestion].question;
+
     document.getElementById("message").innerText = "";
     document.getElementById("answerSelect").value = "";
 }
 
 function showMessage(){
-    const selectedAnswer = document.getElementById("answerSelect").value;
-    
+    const selectedAnswer =
+        document.getElementById("answerSelect").value;
+
     if(selectedAnswer !== ""){
-        document.getElementById("message").innerText = 
+        document.getElementById("message").innerText =
             questions[currentQuestion][selectedAnswer];
     }
 }
 
 function submitAnswer(){
-    const selectedAnswer = document.getElementById("answerSelect").value;
+    const selectedAnswer =
+        document.getElementById("answerSelect").value;
 
     if(selectedAnswer === ""){
         alert("Please select Yes or No first ❤️");
@@ -156,12 +215,12 @@ function submitAnswer(){
 
     if(currentQuestion < questions.length){
         loadQuestion();
-    }else{
+    } else {
         document.querySelector(".container").innerHTML = `
             <h1>🎉 Happy Birthday My Queen 👑❤️</h1>
             <p style="font-size:24px;margin-top:20px;">
             Thank you for being my wife, my happiness,
-            and my forever love ❤️
+            our baby’s amazing mommy, and my forever love ❤️👶
             </p>
         `;
     }
